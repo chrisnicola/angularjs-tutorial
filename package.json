@@ -1,3 +1,1 @@
-{ "name" : "AngularJS Tutorial"
-, "version" : "1.0.0"
-, "dependencies" : { "node-static" : "0.6.9" } }
+{"dependencies" : { "node-static" : "0.6.9" } }

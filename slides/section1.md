@@ -53,7 +53,7 @@ An **architectural framework** (MVC) that drives a dynamic web application.
 
 ## Ok. It's time to _throw down_.
 
-![Backbone vs AngularJS](/assets/backbone-vs-angular.png)
+![Backbone vs AngularJS](assets/backbone-vs-angular.png)
 
 (your MVC is so fat)
 
@@ -385,14 +385,15 @@ describe('Login', function() {
 ## But wait! There's more!
 
 
-![iceberg](/assets/tip-of-the-iceberg.jpg)
+![iceberg](assets/tip-of-the-iceberg.jpg)
 
 
 ## Resources and Stuff
 
-* [Egghead.io](https://egghead.io)
-* [Year of Moo](https://yearofmoo.com)
-* [Angular Batarang](https://github.com/angular/angularjs-batarang) - Profiling Tool
+* [Egghead.io](http://egghead.io)
+* [Year of Moo](http://yearofmoo.com)
+* [Yeoman](http://yeoman.io)
+* [Angular Batarang](http://github.com/angular/angularjs-batarang) - Profiling Tool
 * [Angular Animations](http://www.yearofmoo.com/2013/04/animation-in-angularjs.html) ([demo](http://yearofmoo-articles.github.io/angularjs-animation-article/app/))
 * [Angular Strap](http://mgcrea.github.io/angular-strap/)
 * [SEO support via hashbangs](http://www.yearofmoo.com/2012/11/angularjs-and-seo.html)

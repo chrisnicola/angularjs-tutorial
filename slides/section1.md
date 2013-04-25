@@ -25,7 +25,9 @@ CTO and co-founder of [WealthBar](http://wealthbar.com)
 
 [@saemg](http://twitter.com/saemg)
 
-Lasso Data Systems
+Senior software developer at [Lasso Data Systems](http://lassocrm.com)
+
+Organizer of Polyglot Vancouver
 
 
 
@@ -174,7 +176,7 @@ angular.module('Shared')
 angular.module('MyApplication', ['Shared', 'Rails', 'SocketIO'])
 ```
 
-Can be though of as namespaces
+Can be thought of as namespaces
 
 
 ## Services: Built-in
@@ -312,6 +314,71 @@ myModule.directive('clock', function factory($timeout) {
 * Unit Testing
 * E2E Testing
 * Multi-browser testing
+
+
+## Karma
+
+* Enslaves browsers, just like buster (Multi-browser)
+* Testing framework agnostic
+* Integrates with IDEs and CI
+* Sadly no longer called Testacular
+
+
+## Unit Testing
+
+* We can even test our DOM manipulation
+
+```
+myModule.directive('tag', function factory() {
+  return {
+    restrict: 'A',
+    link: function (scope, iElement, iAttrs) {
+      iElement.text = 'i wuz here ' + iElement.text;
+    }
+  }
+});
+```
+
+```
+describe('Testing the tag directive', function() {
+  var $scope, ctrl, compile;
+
+  beforeEach(module('myApp'));
+  beforeEach(inject(function($rootScope, $compile) {
+    $scope = $rootScope.$new();
+    compile = $compile;
+  }));
+
+  it('should tag the text of an element', function() {
+    var elm = compile('<div tag>Some pristine text.</div>')($scope);
+    expect(elm.text()).toBe('i wuz here Some pristine text.');
+  });
+});
+```
+
+
+## E2E Testing
+
+```
+describe('Login', function() {
+ 
+  describe('Login view', function() {
+ 
+    beforeEach(function() {
+      browser().navigateTo('app/login.html');
+    });
+ 
+ 
+    it('should let you submit your credentials', function() {
+      input('username').enter('bob');
+      input('password').enter('super secret');
+      element('.loginBtn').click();
+      
+      // make sure appropriate side-effect took place
+    });
+  });
+});
+```
 
 
 

@@ -31,24 +31,15 @@ Organizer of Polyglot Vancouver
 
 
 
-## Why?
-
-HTML has limitations when building dynamic applications
-
-Provide reusable dynamic components that can be invoked declaratively
-
-```html
-  <pie-chart pie-data='model.pieData' show-legend='true'>
-```
-
-
-
 ## What?
 
 A way of extending HTML vocabulary with dynamic functionality **declaratively**
 
 An **architectural framework** (MVC) that drives a dynamic web application.
 
+```html
+  <pie-chart pie-data='model.pieData' show-legend='true'>
+```
 
 
 ## Ok. It's time to _throw down_.
@@ -293,17 +284,25 @@ I mean... it's just sooooo simple.
 
 ## Directives
 
-```
+```javascript
 myModule.directive('clock', function factory($timeout) {
   return {
+    scope: { color: '@' }
     template: '<span>{{currentTime | date}}</span>',
-    link: function (scope, iElement, iAttrs) {
+    controller: function($scope, $element, $attrs) {
       $timeout(function() {
-        scope.currentTime = new Date()
+        $scope.currentTime = new Date()
       }, 1000)
+    },
+    link: function($scope, $element, $attrs) {
+      $element.css('color', $scope.color)
     }
   }
 })
+```
+
+```html
+  <clock color="red" />
 ```
 
 
@@ -318,6 +317,7 @@ myModule.directive('clock', function factory($timeout) {
 
 ## Karma
 
+* Test Runner
 * Enslaves browsers, just like buster (Multi-browser)
 * Testing framework agnostic
 * Integrates with IDEs and CI

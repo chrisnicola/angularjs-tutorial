@@ -8,38 +8,47 @@ describe('my app', function() {
     browser().navigateTo('../../app/index.html');
   });
 
+  describe('when there is an empty tweet', function() {
+    it('should have an empty textarea for tweeting', function() {
+      expect(element('#new-tweet-text').text()).toBe("");
+    });
 
-  it('should automatically redirect to /view1 when location hash/fragment is empty', function() {
-    expect(browser().location().url()).toBe("/view1");
+    it('should have a disabled tweet button', function() {
+      expect(element('#tweet-button').attr('disabled')).toBe('disabled');
+    });
   });
 
+  describe('when there is a tweet typed in', function() {
+    var tweet = 'more food for the sound byte culture'
 
-  describe('view1', function() {
-
-    beforeEach(function() {
-      browser().navigateTo('#/view1');
+    it('enabled the tweet button', function() {
+      input('tweet').enter(tweet);
+      expect(element('#tweet-button').attr('disabled')).toBe(undefined);
     });
 
-
-    it('should render view1 when user navigates to /view1', function() {
-      expect(element('[ng-view] p:first').text()).
-        toMatch(/partial for view 1/);
+    it('should show the correct character count', function() {
+      input('tweet').enter(tweet);
+      expect(element('#characters .label-info').css('display')).toBe('inline-block');
+      expect(element('#characters .label').text()).toMatch(140 - tweet.length);
     });
-
   });
 
+  describe('when the tweet is longer than 140 characters', function() {
+    var tweet = ''
+    for (var i = 0; i < 141; i++) {
+      tweet += 'A';
+    }
 
-  describe('view2', function() {
+    it('should disable the tweet button', function() {
+      input('tweet').enter(tweet);
+      expect(element('#tweet-button').attr('disabled')).toBe('disabled');
+    })
 
-    beforeEach(function() {
-      browser().navigateTo('#/view2');
-    });
-
-
-    it('should render view2 when user navigates to /view2', function() {
-      expect(element('[ng-view] p:first').text()).
-        toMatch(/partial for view 2/);
-    });
-
-  });
+    it('should show a warning label', function() {
+      input('tweet').enter(tweet);
+      expect(element('#characters .label-warning').css('display')).toBe('inline-block');
+      expect(element('#characters .label-info').css('display')).toBe('none');
+      expect(element('#characters .label').text()).toMatch(140 - tweet.length);
+    })
+  })
 });

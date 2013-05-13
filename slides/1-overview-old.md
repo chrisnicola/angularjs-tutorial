@@ -1,7 +1,19 @@
 # AngularJS
 
+## The HTML6 Shim
 
-## Intros
+```javascript
+  MyApp = angular.module('Awesome', ['TheSauce'])
+  .config(['$routeProvider'], function($routes) {
+    $routes
+      .when('/hello-world', { templateUrl: '/views/hello.html' })
+      .when('/goodbye', { templateUrl: '/views/goodbye.html' });
+  });
+```
+
+
+
+## Who are we?
 
 ### Chris Nicola
 
@@ -18,26 +30,8 @@ Senior software developer at [Lasso Data Systems](http://lassocrm.com)
 Organizer of Polyglot Vancouver
 
 
-## Syllabus
 
-- 1 This (1hr)
-- 2 Data Binding (1hr 30mins)
-- 3 Services and DI (1hr 30mins)
-{{ Lunch Break }}
-- 4 Templates and Routing (1hr)
-- 5 Directives (2hr)
-- 7 Structuring Applications (30 mins)
-- 8 Code Dojo: Hacking (30 hr)
-
-
-## More Play, Less Slides
-
-- We prefer supervised and goal oriented learning
-- Expect lots of examples and writing code yourself
-
-
-
-## The Angular Philosophy
+## What?
 
 A way of extending HTML vocabulary with dynamic functionality **declaratively**
 
@@ -55,25 +49,6 @@ An **architectural framework** (MVC) that drives a dynamic web application.
 ### Extensability
 ### Testability
 
-
-
-## Getting Setup
-
-- Requirements:
-  - Chrome
-  - Node
-  - Git
-
-
-## Getting The Code
-- git clone [git@github.com:lucisferre/angularjs-tutorial.git]
-  - cd angularjs-tutorial && node ./scripts/web-server.js
-  - browse to [http://localhost:8000]
-
-
-## AngularJS Batarang
-- There is a convenient link in the 'Getting Batarang' section of the README.md
-- Alternatively search for 'AngularJS batarang'
 
 
 ## Key Concepts: MVC
@@ -164,6 +139,9 @@ and you can do much more with the routing API
 * Modules
 * Services
 * Dependency Injection
+
+
+It's like __Spring__ for javascript!
 
 
 ## Modules
@@ -457,4 +435,7 @@ angular.module 'Services', ['ngResources']
 # YMMV
 
 
+
+## Overview of Angular Seed
+- git 
 

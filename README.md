@@ -1,9 +1,9 @@
 # Exercise
 
 - Bind the text area input to a variable on the scope
-- Toggle enable/disable class on the length of the input being greater than 0 and less than 141 characters
+- Toggle enable/disable class on the length of the input being greater than 0
 - Count the number of characters typed thus far and show it to the user
-- Show and hide the count base on whether anything has been typed
+- Show and hide the count based on whether anything has been typed
 - All the tests should pass
 
 # angular-seed — the seed for AngularJS apps

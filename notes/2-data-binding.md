@@ -24,14 +24,24 @@
 - Instead of events we have scope.$apply (akin to transaction)
 - A naive implementation is O(n), and this can be thought of worst case
 
+
 ## A Basic Example
-- Git Tag: 01-controller-wiring
+- Git Tag: controller-wiring
 
 
+## Example: Wiring Up a Controller
 
-# Binding to objects and variables
-# Binding to functions
-# Scope watches, digest and events
+
+## Example: Binding to Objects and Variables
+
+
+## Example: Binding to Functions
+
+
+## Scope, Watches, Digest, and Events
+- 
+
+
 # Iteration
 # Filters
 # Forms binding and validation

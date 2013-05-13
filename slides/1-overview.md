@@ -62,6 +62,7 @@ An **architectural framework** (MVC) that drives a dynamic web application.
 - Requirements:
   - Chrome
   - Node
+    - karma (sudo npm install -g karma)
   - Git
 
 
@@ -76,7 +77,28 @@ An **architectural framework** (MVC) that drives a dynamic web application.
 - Alternatively search for 'AngularJS batarang'
 
 
-## Key Concepts: MVC
+## Reference
+- Keep the following open in your browser at all times (see the README)
+  - [http://docs.angularjs.org/api/]
+  - [http://docs.angularjs.org/guide/]
+
+
+
+## Hello World
+
+- Git Tag: hello-world
+
+
+## Hello World Review
+
+- Practical
+  - ng-model: bind UI elements to items on the scope
+  - ng-disable: disable element based on the truthiness of an item on the scope
+- Big Picture:
+  - Angular provides a limited application mark-up language
+
+
+## Key Concepts: MVC Pattern
 
 * Controller
 * View

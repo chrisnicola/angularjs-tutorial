@@ -7,6 +7,11 @@ instant web development gratification. Just clone the repo (or download the zip/
 our (or yours) webserver and you are ready to develop and test your application.
 
 
+### Getting Batarang
+
+You can install [AngularJS Batarang](https://github.com/angular/angularjs-batarang) from [here](https://chrome.google.com/webstore/detail/angularjs-batarang/ighdmehidhipcmcojjgiloacoafjmpfk?hl=en)
+
+
 ### Running the app during development
 
 * install node.js and run `scripts/web-server.js`

@@ -83,10 +83,38 @@ An **architectural framework** (MVC) that drives a dynamic web application.
   - [http://docs.angularjs.org/guide/]
 
 
+## The Tour
+- Git Tag: angular-seed-tour
+
 
 ## Hello World
-
 - Git Tag: hello-world
+- Complete the objectives as per the README.md
+
+
+## Bind to a Scope Variable
+- ng-model
+  - allows for two way data binding
+  - applied elements such as input, select and textareas
+  - expressed as an attribute or class
+- hint: check the API docs
+
+
+## Disable Elements
+- ng-disable
+  - disables elements based on truthiness of an expression
+  - employs the disabled attribute
+  - expressed as an attribute or class
+- hint: check the API docs
+
+
+## Expressions
+- Angular has a parser for expressions
+- These expressions are very limited
+- They are very forgiving, so undefined, null etc... are not exceptions
+- Think data access
+  - There is some fudging with filters and negation of truthiness
+- This will come up often enough that you'll learn it over time
 
 
 ## Hello World Review
@@ -94,6 +122,7 @@ An **architectural framework** (MVC) that drives a dynamic web application.
 - Practical
   - ng-model: bind UI elements to items on the scope
   - ng-disable: disable element based on the truthiness of an item on the scope
+  - expressions: a DSL for safe evaluation
 - Big Picture:
   - Angular provides a limited application mark-up language
 

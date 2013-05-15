@@ -33,5 +33,4 @@ describe('my app', function() {
       expect(element('#tweet-length').text()).toBe('Character(s): 36');
     });
   });
-  
 });

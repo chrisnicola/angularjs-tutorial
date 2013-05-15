@@ -29,8 +29,9 @@ describe('my app', function() {
     });
     
     it('should show the correct character count', function() {
-      expect(element('#tweet-length').css('display')).toBe(undefined);
-      expect(element('#tweet-length').text()).toBe('Character(s): 36');
+      input('tweet').enter('more food for the sound byte culture');
+      expect(element('#tweet-length').css('display')).toBe('inline-block');
+      expect(element('#tweet-length').text()).toMatch(/Character\(s\): 36/);
     });
   });
 });

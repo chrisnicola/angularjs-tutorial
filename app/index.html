@@ -11,14 +11,14 @@
       <div class="control-group">
         <label class="control-label" for="inputTweet">Tweet:</label>
         <div class="controls">
-          <textarea id="new-tweet-text" rows="3" placeholder="Type your tweet here..."></textarea>
+          <textarea id="new-tweet-text" rows="3" placeholder="Type your tweet here..." ng-model="tweet"></textarea>
         </div>
       </div>
       <div class="control-group">
         <div class="controls">
-          <button id="tweet-button" type="submit" class="btn">Tweet</button>
-          <div id="tweet-length" class="count label label-info">
-            Character(s):
+          <button id="tweet-button" type="submit" class="btn" ng-disabled="!tweet.length">Tweet</button>
+          <div id="tweet-length" class="count label label-info" ng-show="tweet.length">
+            Character(s): {{tweet.length}}
           </div>
         </div>
       </div>

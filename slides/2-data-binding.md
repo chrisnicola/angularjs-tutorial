@@ -31,16 +31,49 @@
 
 
 
-## Example: Wiring Up a Controller
+## Exercise: Wiring Up a Controller
+- Git Tag: wiring-controller
+- Run the Tests:
+  - ./scripts/test.sh
+  - ./scripts/e2e-test.sh
 
 
+## Controllers
+- A constructor function
+  - mutates scope
+  - collaborates with services
+```javascript
+myApp.controller('myController', ['$scope', function($scope) {
+  // ...
+}]);
+```
 
-## Example: Binding to Objects and Variables
+
+## Binding Data
+```javascript
+myApp.controller('myController', ['$scope', function($scope) {
+  $scope.count = 0;
+}]);
+```
 
 
+## Binding Functions
+```javascript
+myApp.controller('myController', ['$scope', function($scope) {
+  $scope.count = 0;
+  $scope.increment = function() { $scope.count++; };
+  $scope.decrement = function() { $scope.count--; };
+}]);
+```
 
-## Example: Binding to Functions
-
+## Putting it Together
+```
+<div class="input-prepend input-append">
+  <button class="btn" ng-click="decrement">-</button>
+  <input class="span2" ng-model="count">
+  <button class="btn" ng-click="increment">+</button>
+</div>
+```
 
 
 ## Scope, Watches, Digest, and Events

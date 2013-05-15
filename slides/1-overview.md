@@ -87,7 +87,7 @@ An **architectural framework** (MVC) that drives a dynamic web application.
 - Git Tag: angular-seed-tour
 
 
-## Exercise Hello World
+## Exercise: Hello World
 - Git Tag: hello-world
 - Run the Tests: ./scripts/e2e-test.sh
 
@@ -125,7 +125,7 @@ An **architectural framework** (MVC) that drives a dynamic web application.
 - This will come up often enough that you'll learn it over time
 
 
-## Implement Hello World
+## Implement: Hello World
 - Complete the objectives as per the README.md
 
 

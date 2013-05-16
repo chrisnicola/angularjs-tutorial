@@ -52,25 +52,13 @@ describe('my app', function() {
     })
   })
 
-  describe('when I post a tweet', function() {
-    var tweet = 'This is a good tweet.'
-
-    it('should add the tweet to the list of tweets', function(){
-      input('tweet').enter(tweet);
-      element('#tweet-button').click();
-      expect(repeater('.tweet').count()).toBe(1);
-      expect(repeater('.tweet-body').row(0)).toMatch(tweet);
-    })
-  })
-
   describe('When I search for tweets with a query', function(){
     var query = 'Google I/O'
 
     it('should return at least one tweet which contains the query', function(){
-      input('search').enter(query);
-      element('#seach-button').click();
-      var tweet_text = repeater('.tweet-body').row(0)
-      expect(tweet_text.split()).toContain(query);
+      input('query').enter(query);
+      element('#search-button').click();
+      expect(element('.tweet').html()).toContain(query);
     })
   })
 });

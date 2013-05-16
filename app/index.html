@@ -30,17 +30,20 @@
         </div>
       </div>
       <div class="span4">
-        <input type="text" ng-model="search"
+        <input type="text" ng-model="query">
+        <button ng-click="search()" id="search-button" class="btn">Search</button>
         <!-- tweets go here -->
-        <div class="tweet media" ng-repeat="tweet in tweets | filter:search">
+        <div id="{{tweet.id}}" class="tweet media" ng-repeat="tweet in tweets">
           <a class="pull-left" href="#">
-            <img class="media-object" data-src="holder.js/64x64">
+            <img class="media-object" ng-src="{{tweet.userAvatarUrl}}">
           </a>
           <div class="media-body">
+            <b>@{{tweet.userName}}</b>
             <div class="tweet-body media">
               <!-- tweet body goes here -->
-                {{tweet}}
+                {{tweet.text}}
             </div>
+            <div class="timestamp">{{tweet.timestamp}}></div>
           </div>
         </div>
       </div>

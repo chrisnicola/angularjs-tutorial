@@ -6,24 +6,43 @@
   <link rel="stylesheet" href="css/bootstrap.css"/>
 </head>
 <body>
-  <div class="hero-unit">
-    <form class="form-horizontal">
-      <div class="control-group">
-        <label class="control-label" for="inputTweet">Tweet:</label>
-        <div class="controls">
-          <textarea id="new-tweet-text" rows="3" placeholder="Type your tweet here..." ng-model="tweet"></textarea>
+  <div class="container-fluid">
+    <div class="row-fluid">
+      <div class="span-8">
+        <div class="hero-unit" ng-controller="MainController">
+          <form class="form-horizontal" ng-submit="postTweet()">
+            <div class="control-group">
+              <label class="control-label" for="inputTweet">Tweet:</label>
+              <div class="controls">
+                <textarea id="new-tweet-text" rows="3" placeholder="Type your tweet here..." ng-model="tweet"></textarea>
+              </div>
+            </div>
+            <div class="control-group">
+              <div class="controls">
+                <button id="tweet-button" type="submit" class="btn" ng-disabled="!tweet.length || tweet.length > 140">Tweet</button>
+                <div id="characters">
+                  <div class="label label-info" ng-show="tweet.length <= 140">{{140 - tweet.length}}</div>
+                  <div class="label label-warning" ng-show="tweet.length > 140">{{140 - tweet.length}}</div>
+                </div>
+              </div>
+            </div>
+          </form>
         </div>
       </div>
-      <div class="control-group">
-        <div class="controls">
-          <button id="tweet-button" type="submit" class="btn" ng-disabled="!tweet.length || tweet.length > 140">Tweet</button>
-          <div id="characters">
-            <div class="label label-info" ng-show="tweet.length <= 140">{{140 - tweet.length}}</div>
-            <div class="label label-warning" ng-show="tweet.length > 140">{{140 - tweet.length}}</div>
+      <div class="span-4">
+        <!-- tweets go here -->
+        <div class="tweet media" ng-repeat="">
+          <a class="pull-left" href="#">
+            <img class="media-object" data-src="holder.js/64x64">
+          </a>
+          <div class="media-body">
+            <div class="tweet-body media">
+              <!-- tweet body goes here -->
+            </div>
           </div>
         </div>
       </div>
-    </form>
+    </div>
   </div>
 
   <script src="lib/jquery/jquery.js"></script>

@@ -51,4 +51,15 @@ describe('my app', function() {
       expect(element('#characters .label').text()).toMatch(140 - tweet.length);
     })
   })
+
+  describe('when I post a tweet', function() {
+    var tweet = 'This is a good tweet.'
+
+    it('should add the tweet to the list of tweets', function(){
+      input('tweet').enter(tweet);
+      element('#tweet-button').click();
+      expect(repeater('.tweet').count()).toBe(1);
+      expect(repeater('.tweet-body').row(0)).toMatch(tweet);
+    })
+  })
 });

@@ -7,5 +7,7 @@ angular.module('myApp.controllers', [])
   $scope.tweets = []
 
   $scope.postTweet = function() {
+    $scope.tweets.push($scope.tweet)
+    $scope.tweet = ''
   }
 });

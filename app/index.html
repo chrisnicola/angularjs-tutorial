@@ -6,10 +6,10 @@
   <link rel="stylesheet" href="css/bootstrap.css"/>
 </head>
 <body>
-  <div class="container-fluid">
+  <div class="container-fluid" ng-controller="MainController">
     <div class="row-fluid">
-      <div class="span-8">
-        <div class="hero-unit" ng-controller="MainController">
+      <div class="span8">
+        <div class="hero-unit">
           <form class="form-horizontal" ng-submit="postTweet()">
             <div class="control-group">
               <label class="control-label" for="inputTweet">Tweet:</label>
@@ -29,15 +29,17 @@
           </form>
         </div>
       </div>
-      <div class="span-4">
+      <div class="span4">
+        <input type="text" ng-model="search"
         <!-- tweets go here -->
-        <div class="tweet media" ng-repeat="">
+        <div class="tweet media" ng-repeat="tweet in tweets | filter:search">
           <a class="pull-left" href="#">
             <img class="media-object" data-src="holder.js/64x64">
           </a>
           <div class="media-body">
             <div class="tweet-body media">
               <!-- tweet body goes here -->
+                {{tweet}}
             </div>
           </div>
         </div>

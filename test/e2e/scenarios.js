@@ -62,4 +62,15 @@ describe('my app', function() {
       expect(repeater('.tweet-body').row(0)).toMatch(tweet);
     })
   })
+
+  describe('When I search for tweets with a query', function(){
+    var query = 'Google I/O'
+
+    it('should return at least one tweet which contains the query', function(){
+      input('search').enter(query);
+      element('#seach-button').click();
+      var tweet_text = repeater('.tweet-body').row(0)
+      expect(tweet_text.split()).toContain(query);
+    })
+  })
 });

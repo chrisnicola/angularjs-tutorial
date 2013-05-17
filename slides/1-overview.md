@@ -4,7 +4,7 @@
 
 
 
-## Section 1 : Introduction
+# Section 1 : Introduction
 
 
 ## About Us
@@ -98,11 +98,13 @@ _not Rails MVC though_
 
 ## Exercise 1: Hello World
 
-`git co -f ex-1-start`
+```
+# Get the code
+git co -f ex-1-start
 
-TDD
-
-`./scripts/e2e-test.sh`
+# Run the tests
+./scripts/e2e-test.sh
+```
 
 The tests should fail, you get to make them pass
 
@@ -110,21 +112,22 @@ The tests should fail, you get to make them pass
 ## Exercise 1 : Hello World
 
 You are in a place where all code examples are about Twitter.
-You must tweet to survive. You're only tool are the following attributes.
+You must tweet to survive. All you have is a commondore64 and the following HTML attributes.
 
 
 ## Exercise 1 : Hello World
 
-- `ng-model="variable"` : Bind an input to a property
-- `ng-show(hide)="expression"` : Show conditionally
-- `ng-disabled="expression"` : Disable conditionally
-- `{{expression}}` : Evaluate an expression as text
+- `ng-model="myVariable"` (for `<input>` tags)
+- `ng-show(hide)="myVariable !== 0"`
+- `ng-disabled="myVariable > 25"`
+- `<p>{{myVariable}}</p>`
 
 __Good luck...__
 
 
 ## Excercise 1 : Lesson's Learned
 
+`git co -f ex-2-solution`
 - AngularJS is _declarative_
 - We have not even written any Javascript
 - Two-way binding that "just works."
@@ -132,6 +135,8 @@ __Good luck...__
 
 
 ## Expressions
+
+`{{ 1 + 1 }}`
 
 - Angular has a parser for expressions
 - These expressions are very limited

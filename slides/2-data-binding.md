@@ -1,10 +1,9 @@
-# Data Binding
-## Section 2
+# Section 2 : Data Binding
 
 
+## Principals
 
-# Principals
-## For when things get confusing
+For when things get confusing
 
 
 ## Controller -> Scope -> View
@@ -30,43 +29,23 @@
 - Dirty Checking
 
 
-
-## Exercise: Wiring Up a Controller
-- Git Tag: wiring-controller
-- Run the Tests:
-  - ./scripts/test.sh
-  - ./scripts/e2e-test.sh
-
-
 ## Controllers
 - A constructor function
   - mutates scope
   - collaborates with services
+
 ```javascript
-myApp.controller('myController', ['$scope', function($scope) {
-  // ...
-}]);
-```
-
-
-## Binding Data
-```javascript
-myApp.controller('myController', ['$scope', function($scope) {
-  $scope.count = 0;
-}]);
-```
-
-
-## Binding Functions
-```javascript
-myApp.controller('myController', ['$scope', function($scope) {
+myApp.controller('MainController', function($scope) {
+  // Controller manages the scope here
   $scope.count = 0;
   $scope.increment = function() { $scope.count++; };
   $scope.decrement = function() { $scope.count--; };
-}]);
+});
 ```
 
-## Putting it Together
+
+## Binding To The View
+
 ```
 <div class="input-prepend input-append">
   <button class="btn" ng-click="decrement">-</button>
@@ -76,5 +55,39 @@ myApp.controller('myController', ['$scope', function($scope) {
 ```
 
 
-## Scope, Watches, Digest, and Events
-- 
+## Exercise 2 : Controllers
+
+```
+# Get the code
+git co -f ex-2-start
+
+# Run the tests
+./scripts/test.sh
+./scripts/e2e-test.sh
+```
+
+
+## Exercise 2 : Controllers
+
+Your tweets are still trapped in the `tweet` model, we *must set them **free***.
+
+Use a controller to add functionaity to your tweet button. It should liberate
+your very important thoughts and add them to a list for all eternity.
+
+
+## Excercise 2 : Lessons Learned
+
+`git co -f ex-2-solution`
+
+- Controllers manage state through `$scope`
+- Controllers can be defined for views using `ng-controller`
+- Views bind to the controller
+
+
+## Excercise 2 : Questions
+
+- What were we binding to before the controller?
+    - `$rootScope`
+- Can controllers be nested?
+    - Yes, which results in nested scopes
+- Anything else?

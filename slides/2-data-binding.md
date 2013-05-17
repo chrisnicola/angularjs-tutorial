@@ -69,10 +69,17 @@ git co -f ex-2-start
 
 ## Exercise 2 : Controllers
 
-Your tweets are still trapped in the `tweet` model, we *must set them **free***.
+```markdown
+> status
+Your tweets are still trapped in the `tweet` model.
+You *must set them **free***.
 
-Use a controller to add functionaity to your tweet button. It should liberate
-your very important thoughts and add them to a list for all eternity.
+You must build a controller to empower your tweet button.
+Then we can liberate your very important thoughts and add them
+to a list to stand for all the ages.
+
+>
+```
 
 
 ## Excercise 2 : Lessons Learned

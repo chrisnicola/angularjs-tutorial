@@ -111,8 +111,17 @@ The tests should fail, you get to make them pass
 
 ## Exercise 1 : Hello World
 
-You are in a place where all code examples are about Twitter.
-You must tweet to survive. All you have is a commondore64 and the following HTML attributes.
+```markdown
+> look
+
+You are in a twitter code example factory. You must tweet for survival.
+You only have a commondore64 and the following HTML attributes.
+
+ng-show, ng-hide, ng-disabled, ng-model and {{}}
+
+Good luck.
+>
+```
 
 
 ## Exercise 1 : Hello World
@@ -128,6 +137,7 @@ __Good luck...__
 ## Excercise 1 : Lesson's Learned
 
 `git co -f ex-2-solution`
+
 - AngularJS is _declarative_
 - We have not even written any Javascript
 - Two-way binding that "just works."

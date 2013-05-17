@@ -130,12 +130,18 @@ git co -f ex-4-start
 
 ## Exercise 4 : Master's and Details
 
+
+```markdown
+> status
 Your twitter search has ended your painful isolation, but you want
 more. If only there was a way to view an individual tweet, to examine it
 further, give it the careful attention these 140 characters of pure wisdom
 deserve...
 
 YOU __MUST__ DO THIS.
+
+>
+```
 
 
 ## Exercise 4 : Master's and Details

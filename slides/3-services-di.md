@@ -1,7 +1,6 @@
 # Services and DI
 
 
-
 ## Services
 
 Services generally contain the vast majority of the application's logic.
@@ -40,7 +39,6 @@ Many services return promises for asynchronous work. Consider applying similar
 patterns for your own services.
 
 Angular provides `$q` to help with this.
-
 
 
 ## Dependency Injection
@@ -100,16 +98,33 @@ myapp.filters('Prime', ['PrimeNumbers', function(primes) { }] )
 ```
 
 
+## Exercise 2 : Controllers
 
-## Testing A Service
+```
+# Get the code
+git co -f ex-3-start
 
-<!--Todo: Example-->
+# Run the tests
+./scripts/test.sh
+./scripts/e2e-test.sh
+```
 
 
+## Exercise 2 : Twitter Search Service
 
-## Build: Twitter Search
+Limited to only your own thoughts, the insanity of your isolation begins to
+gnaw at your soul. You must reach out to others. Implement a twitter search
+service to end the silence and chase away the voices.
 
-* Go to branch `section-3`
-* Read the tests
-* Build a service that uses `$http` to make them pass
-* Inject this service into your controller to implement searching
+
+##Luke, use the $http
+
+
+## Exercise 2 : Lessons Learned
+
+- Services can and usually do use other services
+- DI satisfies service dependencies for both services and controllers (and directives and filters and tests)
+- We can, and should, mock service behavior (e.g. $httpBackend) in our unit tests
+
+
+## Exercise 2 : Questions

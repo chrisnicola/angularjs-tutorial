@@ -1,4 +1,4 @@
-# Section 2 : Data Binding
+# Data Binding
 
 
 ## Principals

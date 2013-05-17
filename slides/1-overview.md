@@ -1,7 +1,13 @@
 # AngularJS
 
+"There's a directive for that"
 
-## Intros
+
+
+## Section 1 : Introduction
+
+
+## About Us
 
 ### Chris Nicola
 
@@ -26,7 +32,7 @@ Organizer of Polyglot Vancouver
 {{ Lunch Break }}
 - 4 Templates and Routing (1hr)
 - 5 Directives (2hr)
-- 7 Structuring Applications (30 mins)
+- 7 Advanced Topics (30 mins)
 - 8 Code Dojo: Hacking (30 hr)
 
 
@@ -34,7 +40,6 @@ Organizer of Polyglot Vancouver
 
 - We prefer supervised and goal oriented learning
 - Expect lots of examples and writing code yourself
-
 
 
 ## The Angular Philosophy
@@ -48,13 +53,13 @@ An **architectural framework** (MVC) that drives a dynamic web application.
 ```
 
 
-## Key Concepts
+## Key Angular Concepts
 
-### MVC Pattern
+### The MVC Pattern
+_not Rails MVC though_
 ### Modularity
 ### Extensability
 ### Testability
-
 
 
 ## Getting Setup
@@ -68,13 +73,14 @@ An **architectural framework** (MVC) that drives a dynamic web application.
 
 ## Getting The Code
 - git clone [git@github.com:lucisferre/angularjs-tutorial.git]
-  - cd angularjs-tutorial && node ./scripts/web-server.js
-  - browse to [http://localhost:8000]
+  - cd angularjs-tutorial && ./scripts/web-server.js
+  - or ./scripts/web-server.bat
+  - Go to [http://localhost:8000]
 
 
-## AngularJS Batarang
-- There is a convenient link in the 'Getting Batarang' section of the README.md
-- Alternatively search for 'AngularJS batarang'
+## The AngularJS Batarang
+- [Plugin for Chrome](https://chrome.google.com/webstore/detail/angularjs-batarang/ighdmehidhipcmcojjgiloacoafjmpfk?hl=en)
+- Provides some debugging facilities specific to AngularJS
 
 
 ## Reference
@@ -83,62 +89,50 @@ An **architectural framework** (MVC) that drives a dynamic web application.
   - [http://docs.angularjs.org/guide/]
 
 
-## The Tour
-- Git Tag: angular-seed-tour
+## Take The Tour
+
+<img src="assets/tourguide.jpg" height="400">
+
+`git co -f angular-seed-tour`
 
 
-## Exercise: Hello World
-- Git Tag: hello-world
-- Run the Tests: ./scripts/e2e-test.sh
+## Exercise 1: Hello World
+
+`git co -f ex-1-start`
+
+TDD
+
+`./scripts/e2e-test.sh`
+
+The tests should fail, you get to make them pass
 
 
-## Bind to a Scope Variable
-- ng-model
-  - allows for two way data binding
-  - applied elements such as input, select and textareas
-  - expressed as an attribute or class
-- hint: check the API docs
+## Exercise 1 : Hello World
+
+You are in a place where all code examples are about Twitter.
+You must tweet to survive. You're only tool are the following attributes.
 
 
-## Disable Elements
-- ng-disable
-  - disables elements based on truthiness of an expression
-  - employs the disabled attribute
-  - expressed as an attribute or class
-- hint: check the API docs
+## Exercise 1 : Hello World
+
+- `ng-model="variable"` : Bind an input to a property
+- `ng-show(hide)="expression"` : Show conditionally
+- `ng-disabled="expression"` : Disable conditionally
+- `{{expression}}` : Evaluate an expression as text
+
+__Good luck...__
 
 
-## Hide/Show Elements
-- ng-hide/ng-show
-  - hides or shows an element based on the truthiness of an expressions
-  - employs a style attribute
-  - expressed as an attribute or class
-- hint: check the API docs
+## Excercise 1 : Lesson's Learned
+
+- AngularJS is _declarative_
+- We have not even written any Javascript
+- Two-way binding that "just works."
+- ng-show/hide, ng-disabled, ng-model, expressions
 
 
 ## Expressions
+
 - Angular has a parser for expressions
 - These expressions are very limited
-- They are very forgiving, so undefined, null etc... are not exceptions
-- Think data access
-  - There is some fudging with filters and negation of truthiness
-- This will come up often enough that you'll learn it over time
-
-
-## Implement: Hello World
-- Complete the objectives as per the README.md
-
-
-## Review
-
-- Practical
-  - ng-model: bind UI elements to items on the scope
-  - ng-disable: disable element based on the truthiness of an item on the scope
-  - ng-hide/ng-show: hide/show an element based on the truthiness of an item on the scope
-  - expressions: a DSL for safe evaluation
-- Big Picture:
-  - Angular already provides a declarative language for many needs
-  - Using this application markup language we can already apps (no JS written)
-
-
-
+- Expressions are very forgiving so undefined, null etc... are not exceptions

@@ -98,7 +98,7 @@ myapp.filters('Prime', ['PrimeNumbers', function(primes) { }] )
 ```
 
 
-## Exercise 2 : Controllers
+## Exercise 3 : Twitter Search Service
 
 ```
 # Get the code
@@ -110,7 +110,7 @@ git co -f ex-3-start
 ```
 
 
-## Exercise 2 : Twitter Search Service
+## Exercise 3 : Twitter Search Service
 
 Limited to only your own thoughts, the insanity of your isolation begins to
 gnaw at your soul. You must reach out to others. Implement a twitter search
@@ -120,11 +120,13 @@ service to end the silence and chase away the voices.
 ##Luke, use the $http
 
 
-## Exercise 2 : Lessons Learned
+## Exercise 3 : Lessons Learned
+
+`git co -f ex-3-solution`
 
 - Services can and usually do use other services
 - DI satisfies service dependencies for both services and controllers (and directives and filters and tests)
 - We can, and should, mock service behavior (e.g. $httpBackend) in our unit tests
 
 
-## Exercise 2 : Questions
+## Exercise 3 : Questions

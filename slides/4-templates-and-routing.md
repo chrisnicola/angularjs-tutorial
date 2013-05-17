@@ -56,7 +56,6 @@ compile it and then insert it into the DOM.
 _how do we know which template to use for the view?_
 
 
-
 ## Routing
 
 ```javascript
@@ -117,15 +116,41 @@ AngularJS `$timeout` returns a promise, the route will now wait for it to
 promises or use `$q` in our own services.
 
 
+## Exercise 4 : Master's and Details
 
-## Build: Using templates in a list
+```
+# Get the code
+git co -f ex-4-start
 
-- git checkout section-4
-- Use a template for the tweets in your search list.
+# Run the tests
+./scripts/test.sh
+./scripts/e2e-test.sh
+```
 
 
-## Build: Using templates for master-details
+## Exercise 4 : Master's and Details
 
-- Create a details page for displaying a single tweet
-- Link to the detail page using a route
-- The tweet should use it's own controller and template
+Your twitter search has ended your painful isolation, but you want
+more. If only there was a way to view an individual tweet, to examine it
+further, give it the careful attention these 140 characters of pure wisdom
+deserve...
+
+YOU __MUST__ DO THIS.
+
+
+## Exercise 4 : Master's and Details
+
+- Use `ng-include` to display your tweet template in your repeater
+- Use `ng-view` and routing to link to a master page for individual tweets
+
+
+## Exercise 4 : Lessons Learned
+
+`git co -f ex-4-solution`
+
+- Templates allow us to have reusable HTML snippets
+- The are great for pages, navigation, repeating elements, mater-detail, etc.
+- Can be used declaratively with `ng-include` or with routing and `ng-view`
+
+
+## Exercise 4 : Questions

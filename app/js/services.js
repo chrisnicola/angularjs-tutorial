@@ -19,6 +19,21 @@ angular.module('myApp.services', [])
 .service('twitter', function TwitterService($http) {
   var searchEndpoint = "http://search.twitter.com/search.json?callback=JSON_CALLBACK";
   this.search = function(query) {
-    // search twitter here
+    var tweets = [];
+    $http({method: 'JSONP', url: searchEndpoint, params: {q:query}}).
+      success(function(data, status, headers, config) {
+      for (var i in data['results']) {
+        status = data['results'][i];
+        var tweet = {};
+        tweet.id = status['id'];
+        tweet.userName = status['from_user'];
+        tweet.text = status['text'];
+        tweet.timestamp = status['created_at'];
+        tweet.userAvatarUrl = status['profile_image_url'];
+        tweets.push(tweet);
+        console.log(status)
+      }
+    });
+    return tweets;
   };
 });

@@ -19,6 +19,22 @@ angular.module('myApp.services', [])
 .service('appnet', function AppNetService($http) {
   var globalEndpoint = "https://alpha-api.app.net/stream/0/posts/stream/global";
   this.global = function() {
-    // retrieve the global stream here.
+    var results = [];
+    $http({method: 'GET', url: globalEndpoint})
+    .success(function(data, status, headers, config) {
+      for (var i in data['data']) {
+        status = data['data'][i];
+        var result = {};
+        result.id = status['id'];
+        result.userName = status['user']['username'];
+        result.text = status['text'];
+        result.text = status['html'];
+        result.timestamp = status['created_at'];
+        result.userAvatarUrl = status['user']['avatar_image']['url'];
+        results.push(result);
+        console.log(status)
+      }
+    });
+    return tweets;
   };
 });

@@ -52,13 +52,22 @@ describe('my app', function() {
     })
   })
 
-  describe('When I search for tweets with a query', function(){
-    var query = 'Google I/O'
+  var query = '#Google'
 
+  describe('When I search for tweets with a query', function(){
     it('should return at least one tweet which contains the query', function(){
       input('query').enter(query);
       element('#search-button').click();
-      expect(element('.tweet').html()).toContain(query);
+      expect(element('.tweet').html()).toMatch(/#google/i);
+    })
+  })
+
+  describe('When we click on a tweet in the search results', function() {
+    it('should navigate to a tweet details page', function() {
+      input('query').enter(query);
+      element('#search-button').click();
+      element('.tweet').click();
+      expect(browser().location().path()).toMatch(/\/tweet\/\w+/);
     })
   })
 });

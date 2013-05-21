@@ -44,7 +44,7 @@ _Ok, for real this time_
 ```javascript
 myModule.directive('colour', function() {
   return function(scope, element, attrs) {
-    element.css('color', attrs.color);
+    element.css('color', attrs.colour);
   }
 })
 ```
@@ -54,15 +54,17 @@ myModule.directive('colour', function() {
 <div color='{{color}}'>Hi, this will be red</div>
 ```
 
+[Try it!](http://plnkr.co/edit/g4JRKH?p=preview)
+
 `element` uses jqLite support by default but will use jQuery if it is available
 
 
-## Directive Templates
+## Directive: Templates
 
 ```javascript
 myModule.directive('facepalm', function() {
   return {
-    restrict: 'E'
+    restrict: 'E',
     replace: true,
     template: "<pre>"
       + "  .-'---`-.\n"
@@ -76,19 +78,23 @@ myModule.directive('facepalm', function() {
       + "   \\/         ''/\n"
       + "    )        / /\n"
       + "   /       ,'-'\n"
-      + "</pre>",
+      + "</pre>"
   }
 });
 ```
 ```html
 <facepalm>
 ```
+[Try it](http://plnkr.co/edit/HR7Vrx?p=preview)
+
+
+## Directive: Restrict
 
 By default, directives work as attributes, `restrict` lets us specify:
 E-element, C-class, A-attribute, M-comment
 
 
-## Directive Templates
+## Directive: Scope
 
 ```javascript
 myModule.directive('', function() {
@@ -105,7 +111,7 @@ myModule.directive('', function() {
 Directives can have their own child scope.
 
 
-## Directive Controllers
+## Directive: Controllers
 
 Directives can also have their own controllers (yay!). This can be useful if a
 directive must manage some internal state and behaviours.
@@ -133,6 +139,8 @@ myModule.directive('clock', function() {
 ```html
   <clock>
 ```
+
+[Try it!](http://plnkr.co/edit/yC6y83z3vjnyLI2JERNn?p=preview)
 
 
 ## Transclusion
@@ -168,6 +176,8 @@ _Not even remotely a real word_
 ```html
 <blink><facepalm></blink>
 ```
+
+[Try it!](http://plnkr.co/edit/hKH4U2?p=preview)
 
 
 ## Directive Scope: '@'

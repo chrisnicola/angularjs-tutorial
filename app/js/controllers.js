@@ -3,9 +3,8 @@
 /* Controllers */
 
 angular.module('myApp.controllers', [])
-.controller('MainController', function($scope, appnet) {
+.controller('MainController', function($scope, $timeout, $location, appnet) {
   $scope.tweets = [];
-
   $scope.postTweet = function() {
     $scope.tweets.push($scope.tweet);
     $scope.tweet = '';
@@ -20,4 +19,10 @@ angular.module('myApp.controllers', [])
   };
 
   $scope.stream();
+
+  $scope.goTo = function(tweetId) {
+    $location.url('/tweet/' + tweetId)
+  }
+}).controller('TweetController', function($scope, $routeParams, appnet) {
+  $scope.tweet = appnet.get($routeParams.tweetId)
 });

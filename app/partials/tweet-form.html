@@ -1,0 +1,17 @@
+<form class="form-horizontal" ng-submit="postTweet()">
+  <div class="control-group">
+    <label class="control-label" for="inputTweet">Tweet:</label>
+    <div class="controls">
+      <textarea id="new-tweet-text" rows="3" placeholder="Type your tweet here..." ng-model="tweet"></textarea>
+    </div>
+  </div>
+  <div class="control-group">
+    <div class="controls">
+      <button id="tweet-button" type="submit" class="btn" ng-disabled="!tweet.length || tweet.length > 140">Tweet</button>
+      <div id="characters">
+        <div class="label label-info" ng-show="tweet.length <= 140">{{140 - tweet.length}}</div>
+        <div class="label label-warning" ng-show="tweet.length > 140">{{140 - tweet.length}}</div>
+      </div>
+    </div>
+  </div>
+</form>

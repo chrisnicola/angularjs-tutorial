@@ -18,6 +18,9 @@ angular.module('myApp.services', [])
    */
 .service('appnet', function AppNetService($http) {
   var globalEndpoint = "https://alpha-api.app.net/stream/0/posts/stream/global?callback=JSON_CALLBACK";
+  var getEndpoint = function(id) {
+    return "https://alpha-api.app.net/stream/0/posts/" + id + "?callback=JSON_CALLBACK";
+  }
   var streamTimeout = null;
   var _this = this;
 
@@ -61,5 +64,17 @@ angular.module('myApp.services', [])
       if(callback) callback(results)
     });
     return results;
+  };
+
+  this.get = function(id) {
+    var result = { id: id };
+    $http.jsonp(getEndpoint(id)).success(function(data) {
+      var status = data["data"]
+        result.username = status['user']['username'];
+        result.text = status['text'];
+        result.timestamp = status['created_at'];
+        result.userAvatarUrl = status['user']['avatar_image']['url'];
+    });
+    return result;
   };
 });

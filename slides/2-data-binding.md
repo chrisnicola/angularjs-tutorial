@@ -55,7 +55,62 @@ myApp.controller('MainController', function($scope) {
 ```
 
 
-## Exercise 2 : Controllers
+## Repeaters and Filters
+
+AngularJS does not support any complex logic in the HTML. This is done with
+repeaters and filters.
+
+```html
+<div ng-repeat="tweet in tweets">
+  <h1>{{tweet.username}}</h>
+  <p>{{tweet.text}}</p>
+</div>
+```
+```html
+<input type="text" ng-model="query">
+<div ng-repeat="tweet in tweets | filter:query">
+```
+
+Yes that is a filter filter.
+
+
+## Included Filters
+
+- `currency[:symbol]`
+- `date[:format]`
+- `filter:query`
+- `json`
+- `limitTo:limit`
+- `lowercase/uppercase`
+- `number[:fractionSize]`
+- `orderBy:expression[:reverse]`
+
+
+# Custom Filters
+
+- reverse[:uppercase]
+
+```javascript
+angular.module('myModule', []).
+filter('reverse', function() {
+  return function(input, uppercase) {
+    var out = "";
+    for (var i = 0; i < input.length; i++) {
+      out = input.charAt(i) + out;
+    }
+    // conditional based on optional argument
+    if (uppercase) {
+      out = out.toUpperCase();
+    }
+    return out;
+  }
+});
+```
+
+Great for interview questions.
+
+
+## Exercise 2 : Data Binding
 
 ```
 # Get the code
@@ -67,7 +122,7 @@ git co -f ex-2-start
 ```
 
 
-## Exercise 2 : Controllers
+## Exercise 2 : Data Binding
 
 ```markdown
 > status
@@ -78,8 +133,18 @@ You must build a controller to empower your tweet button.
 Then we can liberate your very important thoughts and add them
 to a list to stand for all the ages.
 
+A _filter filter_ would be nice while you're at it.
+
 >
 ```
+
+
+## Exercise 2 : Hints
+
+- Use ng-repeat to show lists of things
+- Add an input with ng-model to use with the filter filter.
+- Javascript arrays have a `push(object)` method
+- Bonus: make a custom filter (e.g. highlight hashtags)
 
 
 ## Excercise 2 : Lessons Learned

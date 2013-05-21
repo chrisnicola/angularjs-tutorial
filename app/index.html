@@ -10,11 +10,12 @@
     <div class="row-fluid">
       <div class="span8">
         <div class="hero-unit">
-          <form class="form-horizontal" ng-submit="postTweet()">
+          <form name="tweetForm" class="form-horizontal" ng-submit="postTweet()">
             <div class="control-group">
               <label class="control-label" for="inputTweet">Tweet:</label>
               <div class="controls">
-                <textarea id="new-tweet-text" rows="3" placeholder="Type your tweet here..." ng-model="tweet"></textarea>
+                <textarea id="new-tweet-text" rows="3" placeholder="Type your tweet here..." name="tweet" ng-model="tweet" no-bro></textarea>
+                <div class="label label-error" ng-show="tweetForm.tweet.$error.brocabulary">Don't do it, bro!</div>
               </div>
             </div>
             <div class="control-group">
@@ -27,24 +28,6 @@
               </div>
             </div>
           </form>
-        </div>
-      </div>
-      <div class="span4">
-        <input type="text" ng-model="query">
-        <button ng-click="search()" id="search-button" class="btn">Search</button>
-        <!-- tweets go here -->
-        <div id="{{tweet.id}}" class="tweet media" ng-repeat="tweet in tweets">
-          <a class="pull-left" href="#">
-            <img class="media-object" ng-src="{{tweet.userAvatarUrl}}">
-          </a>
-          <div class="media-body">
-            <b>@{{tweet.userName}}</b>
-            <div class="tweet-body media">
-              <!-- tweet body goes here -->
-                {{tweet.text}}
-            </div>
-            <div class="timestamp">{{tweet.timestamp}}></div>
-          </div>
         </div>
       </div>
     </div>

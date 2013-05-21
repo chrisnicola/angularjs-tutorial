@@ -124,7 +124,7 @@ Good luck.
 ```
 
 
-## Exercise 1 : Hello World
+## Exercise 1 : Hints
 
 - `ng-model="myVariable"` (for `<input>` tags)
 - `ng-show(hide)="myVariable !== 0"`

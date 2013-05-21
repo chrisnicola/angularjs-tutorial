@@ -267,7 +267,7 @@ To do list of evil
 
 ## Exercise 5 : Lessons Learned
 
-directives are awesome
+Directives are awesome
 
 
 ## Exercise 5 : Questions

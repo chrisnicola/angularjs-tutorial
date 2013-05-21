@@ -145,7 +145,7 @@ YOU __MUST__ DO THIS.
 ```
 
 
-## Exercise 4 : Master's and Details
+## Exercise 4 : Hints
 
 - Use `ng-include` to display a tweet template in your repeater
 - Use `ng-view` and routing to display a master page for individual tweets

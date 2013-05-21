@@ -126,6 +126,13 @@ You're also a little hungry.
 ```
 
 
+## Excercise 3 : Hints
+
+- You need to handle asynchronous return values somehow.
+- Passing functions seems inelegant.
+- You can take advantage of AngularJS data-binding instead.
+
+
 ## Exercise 3 : Lessons Learned
 
 `git co -f ex-3-solution`

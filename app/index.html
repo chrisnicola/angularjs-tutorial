@@ -9,43 +9,13 @@
   <div class="container-fluid" ng-controller="MainController">
     <div class="row-fluid">
       <div class="span8">
-        <div class="hero-unit">
-          <form class="form-horizontal" ng-submit="postTweet()">
-            <div class="control-group">
-              <label class="control-label" for="inputTweet">Tweet:</label>
-              <div class="controls">
-                <textarea id="new-tweet-text" rows="3" placeholder="Type your tweet here..." ng-model="tweet"></textarea>
-              </div>
-            </div>
-            <div class="control-group">
-              <div class="controls">
-                <button id="tweet-button" type="submit" class="btn" ng-disabled="!tweet.length || tweet.length > 140">Tweet</button>
-                <div id="characters">
-                  <div class="label label-info" ng-show="tweet.length <= 140">{{140 - tweet.length}}</div>
-                  <div class="label label-warning" ng-show="tweet.length > 140">{{140 - tweet.length}}</div>
-                </div>
-              </div>
-            </div>
-          </form>
-        </div>
+        <div class="hero-unit" ng-view></div>
       </div>
       <div class="span4">
         <input type="text" ng-model="query">
         <button ng-click="search()" id="search-button" class="btn">Search</button>
         <!-- tweets go here -->
-        <div id="{{tweet.id}}" class="tweet media" ng-repeat="tweet in tweets">
-          <a class="pull-left" href="#">
-            <img class="media-object" ng-src="{{tweet.userAvatarUrl}}">
-          </a>
-          <div class="media-body">
-            <b>@{{tweet.userName}}</b>
-            <div class="tweet-body media">
-              <!-- tweet body goes here -->
-                {{tweet.text}}
-            </div>
-            <div class="timestamp">{{tweet.timestamp}}></div>
-          </div>
-        </div>
+        <div ng-click="goTo(tweet.id)" ng-repeat="tweet in tweets" ng-include="'partials/tweet.html'"></div>
       </div>
     </div>
   </div>

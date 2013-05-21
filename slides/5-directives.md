@@ -2,6 +2,13 @@
 This is why we are here
 
 
+## Why Directives?
+
+Templates are not the only way to create reusable components in our page.
+
+In fact directives will be far more common for this.
+
+
 ## Simple Directives
 
 ```
@@ -27,10 +34,12 @@ myModule.directive('directiveName', function factory(injectables) {
 });
 ```
 
+errrmmm....
+
 
 ## Simple Directives
 
-_for real this time_
+_Ok, for real this time_
 
 ```javascript
 myModule.directive('colour', function() {
@@ -75,6 +84,9 @@ myModule.directive('facepalm', function() {
 <facepalm>
 ```
 
+By default, directives work as attributes, `restrict` lets us specify:
+E-element, C-class, A-attribute, M-comment
+
 
 ## Directive Templates
 
@@ -90,13 +102,13 @@ myModule.directive('', function() {
 });
 ```
 
-Directives can have their own scope which the template can use.
+Directives can have their own child scope.
 
 
 ## Directive Controllers
 
-Directives can have their own controllers (yay!). This can be useful if a
-directive must maintain internal state for it's behavior.
+Directives can also have their own controllers (yay!). This can be useful if a
+directive must manage some internal state and behaviours.
 
 
 ## Directive Controller
@@ -125,7 +137,14 @@ myModule.directive('clock', function() {
 
 ## Transclusion
 
-_not a real word_
+Ok lets, explain how `transclude` works.
+
+![WTF is Transclusion](assets/wtftransclude.jpg)
+
+
+## Transclusion
+
+_Not even remotely a real word_
 
 ```javascript
 .directive('blink', function() {
@@ -214,3 +233,31 @@ myModule.directive('colour', function() {
 
 Typically used where you want a directive to
 execute a function passed to it from a controller scope.
+
+
+## Excercise 5 : Lets make directives
+
+```markdown
+> status
+Carefully studying the worlds status updates has exposed them for what they
+truely are. Not the beutiful haiku of millions of voices but complete and utter
+drivel. You're psycological break is complete.
+
+You will turn your insanity against the world. Against the HTML it holds so
+dear, you will change it, warp it, bend it to your twisted will.
+__You will create directives__.
+
+NO ONE CAN STOP YOU!
+
+>
+```
+
+
+## Excercise 5 : Free Thinking with HTML
+
+Some ideas:
+- A timestamp that counts up in seconds since the tweet was posted.
+- A tweet oembed directive (could be used in your details view)
+- Replace hash tags in the text with links (or make them blink or something).
+- Rotating avatars
+

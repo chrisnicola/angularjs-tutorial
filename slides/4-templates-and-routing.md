@@ -130,13 +130,14 @@ git co -f ex-4-start
 
 ## Exercise 4 : Master's and Details
 
-
 ```markdown
 > status
 Your twitter search has ended your painful isolation, but you want
 more. If only there was a way to view an individual tweet, to examine it
 further, give it the careful attention these 140 characters of pure wisdom
 deserve...
+
+You will need to use all your newly acquired skills.
 
 YOU __MUST__ DO THIS.
 
@@ -146,17 +147,20 @@ YOU __MUST__ DO THIS.
 
 ## Exercise 4 : Master's and Details
 
-- Use `ng-include` to display your tweet template in your repeater
-- Use `ng-view` and routing to link to a master page for individual tweets
+- Use `ng-include` to display a tweet template in your repeater
+- Use `ng-view` and routing to display a master page for individual tweets
+- Consider where you want to show the details, you don't have to replace the
+  whole page.
+- You could use the same template in the repeater and details if you want.
 
 
 ## Exercise 4 : Lessons Learned
 
 `git co -f ex-4-solution`
 
-- Templates allow us to have reusable HTML snippets
+- Templates allow for reusable HTML snippets.
 - The are great for pages, navigation, repeating elements, mater-detail, etc.
-- Can be used declaratively with `ng-include` or with routing and `ng-view`
+- Can be used declaratively with `ng-include` or with routing and `ng-view`.
 
 
 ## Exercise 4 : Questions

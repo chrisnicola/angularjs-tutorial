@@ -253,11 +253,24 @@ NO ONE CAN STOP YOU!
 ```
 
 
-## Excercise 5 : Free Thinking with HTML
+## Excercise 5 : Free Thinking HTML
 
-Some ideas:
+To do list of evil
+
 - A timestamp that counts up in seconds since the tweet was posted.
 - A tweet oembed directive (could be used in your details view)
 - Replace hash tags in the text with links (or make them blink or something).
-- Rotating avatars
+- `<div do-a-barrel-roll>`
+- `<random-cat-meme>`
+- `<prime-directive>`
 
+
+## Exercise 5 : Lessons Learned
+
+directives are awesome
+
+
+## Exercise 5 : Questions
+
+- What are some best practices with directives?
+- What is isolate scope used for in practice?

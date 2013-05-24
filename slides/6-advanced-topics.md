@@ -75,3 +75,12 @@ git co -f eg-6-1
 
 ## Questions?
 - What advanced topics would you like covered/revisited?
+
+
+## Follow-up Resources
+
+- [Angular at Google i/o](http://www.youtube.com/watch?v=HCR7i5F5L8c)
+- [Year Of Moo](http://www.yearofmoo.com/)
+- [Egghead.io](http://www.egghead.io/)
+- [Angular UI](http://angular-ui.github.io/)
+- [Google Group](https://groups.google.com/forum/?fromgroups#!forum/angular)

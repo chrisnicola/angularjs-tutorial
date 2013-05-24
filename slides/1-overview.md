@@ -29,7 +29,7 @@ Organizer of Polyglot Vancouver
 - 1 This (1hr)
 - 2 Data Binding (1hr 30mins)
 - 3 Services and DI (1hr 30mins)
-{{ Lunch Break }}
+- {{ Lunch Break }}
 - 4 Templates and Routing (1hr)
 - 5 Directives (2hr)
 - 7 Advanced Topics (30 mins)
@@ -72,10 +72,12 @@ _not Rails MVC though_
 
 
 ## Getting The Code
-- git clone [git@github.com:lucisferre/angularjs-tutorial.git]
-  - cd angularjs-tutorial && ./scripts/web-server.js
-  - or ./scripts/web-server.bat
-  - Go to [http://localhost:8000]
+
+```bash
+git clone git@github.com:lucisferre/angularjs-tutorial.git
+cd angularjs-tutorial && ./scripts/web-server.js
+open http://localhost:8000
+```
 
 
 ## The AngularJS Batarang
@@ -114,8 +116,9 @@ The tests should fail, you get to make them pass
 ```markdown
 > look
 
-You are in a twitter code example factory. You must tweet for survival.
-You only have a commondore64 and the following HTML attributes.
+You are in a Twitter code sample factory. You must tweet for your
+very survival. You only have a commondore64 and the following HTML
+attributes.
 
 ng-show, ng-hide, ng-disabled, ng-model and {{}}
 

@@ -249,13 +249,13 @@ execute a function passed to it from a controller scope.
 
 ```markdown
 > status
-Carefully studying the worlds status updates has exposed them for what they
-truely are. Not the beutiful haiku of millions of voices but complete and utter
-drivel. You're psycological break is complete.
+Carefully studying the worlds status updates has exposed them for what
+they truely are. Not the beutiful haiku of millions of voices but
+complete and utter drivel. You're psycological break is complete.
 
-You will turn your insanity against the world. Against the HTML it holds so
-dear, you will change it, warp it, bend it to your twisted will.
-__You will create directives__.
+You will turn your insanity against the world. Against the HTML it
+holds so dear, you will change it, warp it, bend it to your twisted
+will.  __You will create directives__.
 
 NO ONE CAN STOP YOU!
 

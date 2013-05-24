@@ -254,7 +254,7 @@ body {
 
 .reveal p {
 	margin-bottom: 10px;
-	line-height: 1.2em;
+	line-height: 1.3em;
 }
 
 .reveal q,
@@ -291,7 +291,7 @@ body {
 	text-align: left;
 	font-size: 0.55em;
 	font-family: monospace;
-	line-height: 1.2em;
+	line-height: 1.3em;
 
 	word-wrap: break-word;
 
@@ -327,7 +327,7 @@ body {
 .reveal small {
 	display: inline-block;
 	font-size: 0.6em;
-	line-height: 1.2em;
+	line-height: 1.3em;
 	vertical-align: top;
 }
 
@@ -458,7 +458,7 @@ body {
 
 .reveal .roll {
 	display: inline-block;
-	line-height: 1.2;
+	line-height: 1.3;
 	overflow: hidden;
 
 	vertical-align: top;
@@ -582,7 +582,7 @@ body {
 	padding: 20px 0px;
 
 	z-index: 10;
-	line-height: 1.2em;
+	line-height: 1.3em;
 
 	-webkit-transform-style: preserve-3d;
 	   -moz-transform-style: preserve-3d;

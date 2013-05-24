@@ -5,9 +5,9 @@ It's pronounced "ra-oots" of course.
 
 ## Templates
 
-AngularJS supports template/partial files that can reused and pulled into views.
+<img src="assets/linotype.jpg" width="480px" />
 
-_imagine if everything had to go in index.html?_
+AngularJS supports template/partial files that can reused and pulled into views.
 
 
 ## Templates
@@ -54,6 +54,11 @@ compile it and then insert it into the DOM.
 ```
 
 _how do we know which template to use for the view?_
+
+
+## Routing
+
+![wiring](assets/wiring.jpg)
 
 
 ## Routing
@@ -133,9 +138,9 @@ git co -f ex-4-start
 ```markdown
 > status
 Your twitter search has ended your painful isolation, but you want
-more. If only there was a way to view an individual tweet, to examine it
-further, give it the careful attention these 140 characters of pure wisdom
-deserve...
+more. If only there was a way to view an individual tweet, to examine
+it further, give it the careful attention these 140 characters of pure
+wisdom deserve...
 
 You will need to use all your newly acquired skills.
 

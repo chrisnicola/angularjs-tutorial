@@ -114,9 +114,9 @@ git co -f ex-3-start
 
 ```markdown
 > status
-Limited to only your own thoughts, the insanity of your isolation begins to
-gnaw at your soul. You must reach out to others. Implement a twitter search
-service to end the silence and chase away the voices.
+Limited to only your own thoughts, the insanity of your isolation
+begins to gnaw at your soul. You must reach out to others. Implement a
+twitter search service to end the silence and chase away the voices.
 
 Luke, use the $http service.
 

@@ -67,5 +67,5 @@ angular.module('twitter.tweet', ['Shared'])
 
 ## NgModelController
 
-git co -f eg-6-1-ng-model-controller
+git co -f eg-6-1
 

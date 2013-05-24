@@ -68,6 +68,10 @@ angular.module('twitter.tweet', ['Shared'])
 
 
 ## NgModelController
+_(optional)_
 
 git co -f eg-6-1
 
+
+## Questions?
+- What advanced topics would you like covered/revisited?

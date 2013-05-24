@@ -14,7 +14,9 @@ Domain Driven Design/SOLID
 - As per angular-seed or yeoman
 - This works great until:
   - controller.js, directive.js, etc.js ... become enormous
+  - layout doesn't descibe app
   - merge conflicts
+  - scrolling
 
 
 ## DDD/SOLID

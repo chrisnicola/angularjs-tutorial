@@ -48,9 +48,9 @@ myApp.controller('MainController', function($scope) {
 
 ```
 <div class="input-prepend input-append">
-  <button class="btn" ng-click="decrement">-</button>
+  <button class="btn" ng-click="decrement()">-</button>
   <input class="span2" ng-model="count">
-  <button class="btn" ng-click="increment">+</button>
+  <button class="btn" ng-click="increment()">+</button>
 </div>
 ```
 

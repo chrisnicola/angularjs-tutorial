@@ -19,6 +19,7 @@
     - compilation can be multistaged (pre/post linking)
   - but based on usage bind differently (link)
 
+
 ## Simple Directives
 - we're returning the link function, this is invoked for each instance to handle that specific instance
 - jqLite is a lite version of jQuery, it steps aside if you use jQuery
@@ -43,6 +44,7 @@
 
 
 ## Directive Controllers
+- I wish they were called something else
 - This allows you to provide logic/API for other directives to interact with you
 - The homepage illustrates a tab controller:
   - panes to select themselves

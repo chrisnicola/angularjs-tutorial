@@ -11,7 +11,7 @@
 
 ### Chris Nicola
 
-[@lucisferre](http://twitter.com/lucisferre)
+[@chrismnicola](http://twitter.com/chrismnicola)
 
 CTO and co-founder of [WealthBar](http://wealthbar.com)
 

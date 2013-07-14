@@ -9,8 +9,7 @@ describe('service', function() {
     beforeEach(inject(function($httpBackend, appnet) {
       $httpBackend.expectJSONP('https://alpha-api.app.net/stream/0/posts/stream/global?callback=JSON_CALLBACK')
       .respond({
-        "data":[
-          {
+        "data":[{
           "created_at":"2013-07-14T17:35:17Z",
           "text":"I'm trapped in a social media loop",
           "id":"7667512",

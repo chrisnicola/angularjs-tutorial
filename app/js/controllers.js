@@ -3,7 +3,7 @@
 /* Controllers */
 
 angular.module('myApp.controllers', [])
-.controller('MainController', function($scope, $timeout, twitter) {
+.controller('MainController', function($scope, $timeout, appnet) {
   $scope.tweets = []
 
   $scope.postTweet = function() {
@@ -12,6 +12,6 @@ angular.module('myApp.controllers', [])
   }
 
   $scope.search = function() {
-    $scope.tweets = twitter.search($scope.query);
+    $scope.tweets = appnet.global();
   }
 });

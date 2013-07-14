@@ -14,11 +14,11 @@ angular.module('myApp.services', [])
 
    AnguarJS $http API:
    http://docs.angularjs.org/api/ng.$http
-   hint: add callback=JSONP_CALLBACK for AngularJS jsonp support
+   hint: add callback=JSON_CALLBACK for AngularJS jsonp support
    */
-.service('twitter', function TwitterService($http) {
-  var searchEndpoint = "http://search.twitter.com/search.json?callback=JSON_CALLBACK";
-  this.search = function(query) {
-    // search twitter here
+.service('appnet', function AppNetService($http) {
+  var globalEndpoint = "https://alpha-api.app.net/stream/0/posts/stream/global";
+  this.global = function() {
+    // retrieve the global stream here.
   };
 });

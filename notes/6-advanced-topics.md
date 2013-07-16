@@ -36,9 +36,11 @@
 ## DDD/SOLID
 
 
-## ngModelController
-- This is likely the most used directive
-- It shouldn't be thought of something special
-- Hopefully by now it should be obvious how little magic angular has
-- This is how one gets at some of the API
-- More importantly, get comfortable with diving into the code and internals
+## D3 Integration
+- Naively we could just copy the body of the examples straight into the link function
+  - Anyone have a guess as to what the down sides might be?
+    - no two way data binding
+    - fetch is via D3 rather than angular (which may or may not be a good thing)
+    - can't easily rebind the data per instance
+    - in short, it's not angular
+- This is what an angularized version might look like

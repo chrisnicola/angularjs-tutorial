@@ -59,18 +59,19 @@ angular.module('twitter.tweet', ['Shared'])
 ```
 
 
+## Adapting Libraries
+D3
+[Force Directed Graph](http://bl.ocks.org/mbostock/4062045)
+[Bubble Chart](http://bl.ocks.org/mbostock/4063269)
+
+git co -f eg-6-2
+
 ## DDD/SOLID
 
 - Things that change together, stay together
 - The enumerable benefits as desribed by DDD/SOLID
 - You will not have to suffer Uncle Bob's wrath
 - The standard tooling/config will fight you
-
-
-## NgModelController
-_(optional)_
-
-git co -f eg-6-1
 
 
 ## Questions?
@@ -84,3 +85,9 @@ git co -f eg-6-1
 - [Egghead.io](http://www.egghead.io/)
 - [Angular UI](http://angular-ui.github.io/)
 - [Google Group](https://groups.google.com/forum/?fromgroups#!forum/angular)
+
+
+## NgModelController
+_(optional)_
+
+git co -f eg-6-1

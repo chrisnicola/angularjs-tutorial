@@ -34,16 +34,15 @@
       <div class="span4">
         <input type="text" ng-model="query">
         <!-- tweets go here -->
-        <div id="{{tweet.id}}" class="tweet media" ng-repeat="tweet in tweets | filter:query | orderBy:'id':'true'">
+        <div id="{{tweet.id}}" class="tweet media" ng-repeat="tweet in tweets | filter:query">
           <a class="pull-left" href="#">
             <img class="media-object" width="50" ng-src="{{tweet.userAvatarUrl}}">
           </a>
           <div class="media-body">
-            <b>@{{tweet.username}}</b>
-            <div class="tweet-body media">
+            <b>@{{tweet.username}}:</b>
+            <span class="tweet-body media" ng-bind-html-unsafe="tweet.html">
               <!-- tweet body goes here -->
-                {{tweet.text}}
-            </div>
+            </span>
             <div class="timestamp">{{tweet.timestamp | date:'medium'}}</div>
           </div>
         </div>

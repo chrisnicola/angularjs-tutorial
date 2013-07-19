@@ -27,9 +27,10 @@ angular.module('myApp.services', [])
     var lastId = '0';
     var update = function() {
       _this.global(function(results) {
-        for (var i in results) {
+        console.log(results)
+        for (var i=results.length-1; i >= 0; i--) {
           if (results[i].id > lastId) {
-            stream.push(results[i])
+            stream.unshift(results[i])
             lastId = results[i].id
           }
         }
@@ -52,6 +53,7 @@ angular.module('myApp.services', [])
         result.id = status['id'];
         result.username = status['user']['username'];
         result.text = status['text'];
+        result.html = status['html'];
         result.timestamp = status['created_at'];
         result.userAvatarUrl = status['user']['avatar_image']['url'];
         results.push(result);

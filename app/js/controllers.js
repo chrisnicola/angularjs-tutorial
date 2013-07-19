@@ -3,7 +3,7 @@
 /* Controllers */
 
 angular.module('myApp.controllers', [])
-.controller('MainController', function($scope, $timeout, appnet) {
+.controller('MainController', function($scope, appnet) {
   $scope.tweets = [];
 
   $scope.postTweet = function() {
@@ -12,7 +12,7 @@ angular.module('myApp.controllers', [])
   };
 
   $scope.stream = function() {
-    $scope.tweets = appnet.stream(2000);
+    $scope.tweets = appnet.stream(1000);
   };
 
   $scope.search = function() {

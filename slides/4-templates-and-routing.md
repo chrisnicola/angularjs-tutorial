@@ -66,7 +66,7 @@ _how do we know which template to use for the view?_
 ```javascript
 myApp = angular.module('myApp', [])
 .config(['$routeProvider'], function($routes) {
-  $routeProvider.when('/home', {
+  $routes.when('/home', {
       controller: 'HomeController',
       templateUrl: 'template.html'
     }).when('/hello', {
@@ -86,8 +86,8 @@ the route rules.
 ## Routing Events
 
 - `$routeChangeStart` - next, last
-- `$routeChageSuccess` - next, last
-- `$routeChageError` - next, last, error
+- `$routeChangeSuccess` - next, last
+- `$routeChangeError` - next, last, error
 - `$routeUpdate` - last
 
 ```javascript

@@ -3,11 +3,11 @@
     <img class="media-object" width="50" ng-src="{{tweet.userAvatarUrl}}">
   </span>
   <div class="media-body">
-    <b>@{{tweet.username}}</b>
-    <div class="tweet-body media">
+    <b>@{{tweet.username}}: </b>
+    <span class="tweet-body media">
       <!-- tweet body goes here -->
         {{tweet.text}}
-    </div>
+    </span>
     <div class="timestamp">{{tweet.timestamp | date:'medium'}}</div>
   </div>
 </div>

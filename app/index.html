@@ -33,9 +33,9 @@
         <input type="text" ng-model="query">
         <button ng-click="search()" id="search-button" class="btn">Search</button>
         <!-- tweets go here -->
-        <div id="{{tweet.id}}" class="tweet media" ng-repeat="tweet in tweets">
+        <div id="{{tweet.id}}" class="tweet media" ng-repeat="tweet in tweets | filter:query">
           <a class="pull-left" href="#">
-            <img class="media-object" ng-src="{{tweet.userAvatarUrl}}">
+            <img width="50" class="media-object" ng-src="{{tweet.userAvatarUrl}}">
           </a>
           <div class="media-body">
             <b>@{{tweet.username}}</b>
@@ -43,7 +43,7 @@
               <!-- tweet body goes here -->
                 {{tweet.text}}
             </div>
-            <div class="timestamp">{{tweet.timestamp}}></div>
+            <div class="timestamp">{{tweet.timestamp}}</div>
           </div>
         </div>
       </div>
